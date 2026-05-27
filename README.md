@@ -1,3 +1,5 @@
+[English](./README.md) | [中文](./README-ZH.md)
+
 # OpenClaw A-Stock
 
 An AI-powered full-stack quantitative analysis toolkit for the A-share (Chinese Stock Market) market. This project integrates **OpenClaw** (an AI agent gateway) with **LiteLLM** (a multi-model proxy) and a specialized **A-stock data skill** to provide a comprehensive research environment.
@@ -90,4 +92,7 @@ The `a-stock-data` skill is the heart of this project. It provides 28 endpoints 
 7. **Announcement Layer:** Full-text search for official company announcements (Cninfo).
 
 # Exmaple use
+```bash
+docker exec -it openclaw-service openclaw chat
 Give me the current price and valuation (PE/PB) for Kweichow Moutai (600519).
+```
