@@ -1,0 +1,40 @@
+services:
+  litellm:
+    image: ghcr.io/berriai/litellm:main-latest
+    container_name: litellm-proxy
+    ports:
+      - "4000:4000"
+    environment:
+      - LLM_API_KEY=${LLM_API_KEY}
+    volumes:
+      - ./litellm/config.yaml:/app/config.yaml
+    command: [ "--config", "/app/config.yaml", "--port", "4000" ]
+    networks:
+      - ai-stack
+    restart: unless-stopped
+
+  openclaw:
+    build: 
+      context: ./openclaw
+    container_name: openclaw-service
+    environment:
+      - MODEL_NAME=${MODEL_NAME} 
+      - LITELLM_MASTER_KEY=${LITELLM_MASTER_KEY}
+      - IWENCAI_API_KEY=${IWENCAI_API_KEY}
+    volumes:
+      # Use a named volume for general state (memory, sessions)
+      - openclaw_data:/root/.openclaw
+      - ./openclaw/openclaw.json:/staging/openclaw.json:ro
+      - ./skills/a-stock-data:/root/.openclaw/workspace/skills/a-stock-data
+    networks:
+      - ai-stack
+    depends_on:
+      - litellm
+    restart: unless-stopped
+
+networks:
+  ai-stack:
+    driver: bridge
+
+volumes:
+  openclaw_data:

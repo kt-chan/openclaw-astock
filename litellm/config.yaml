@@ -1,0 +1,19 @@
+model_list:
+  - model_name: glm-4.7-flash
+    litellm_params:
+      model: openai/GLM-4.7-Flash
+      api_key: "os.environ/LLM_API_KEY"
+      api_base: "https://open.bigmodel.cn/api/paas/v4/"
+      drop_params: true
+      safe_prompt: true
+  - model_name: glm-4.7-flashx
+    litellm_params:
+      model: openai/GLM-4.7-FlashX
+      api_key: "os.environ/LLM_API_KEY"
+      api_base: "https://open.bigmodel.cn/api/paas/v4/"
+      drop_params: true
+      safe_prompt: true
+
+general_settings:
+  master_key: sk-stack-master-key
+  drop_params: true
