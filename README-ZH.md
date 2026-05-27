@@ -1,3 +1,5 @@
+[English](./README.md) | [中文](./README-ZH.md)
+
 # OpenClaw A股量化分析工具包
 
 一个基于 AI 的全栈式 A 股市场量化分析工具包。本项目集成了 **OpenClaw**（AI Agent 网关）、**LiteLLM**（多模型代理）以及一个专门的 **A股数据技能**，提供全面的研究环境。
