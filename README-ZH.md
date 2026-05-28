@@ -33,7 +33,7 @@ OpenClaw A股量化工具包专为资深量化分析师和 AI 研究人员设计
 
 1. **克隆代码仓库：**
    ```bash
-   git clone https://github.com/your-repo/openclaw-astock.git
+   git clone https://github.com/your-repo/openclaw-astock
    cd openclaw-astock
    ```
 
