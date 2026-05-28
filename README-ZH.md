@@ -53,6 +53,7 @@ OpenClaw A股量化工具包专为资深量化分析师和 AI 研究人员设计
    ```
    或手动执行：
    ```bash
+   docker compose build
    docker-compose up -d
    ```
 
