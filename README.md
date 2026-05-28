@@ -33,7 +33,7 @@ The project uses a microservice architecture orchestrated by Docker Compose:
 
 1. **Clone the repository:**
    ```bash
-   git clone https://github.com/your-repo/openclaw-astock.git
+   git clone https://github.com/your-repo/openclaw-astock
    cd openclaw-astock
    ```
 
