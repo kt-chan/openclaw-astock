@@ -48,12 +48,13 @@ OpenClaw A股量化工具包专为资深量化分析师和 AI 研究人员设计
 
 3. **启动服务栈：**
    ```bash
+   docker-compose build or docker compose build
    chmod u+X *.sh
    ./restart.sh
    ```
    或手动执行：
    ```bash
-   docker compose build
+   docker-compose build or docker compose build
    docker-compose up -d
    ```
 
